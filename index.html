@@ -3,77 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎主页</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Orbitron', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            color: #ffffff;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-        }
-        h1 {
-            font-size: 4rem;
-            color: #ffffff;
-            animation: textAnimation 2s ease-in-out infinite;
-        }
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes textAnimation {
-            0%, 100% { text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff; }
-            50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff; }
-        }
-    </style>
+    <title>EXPORTODO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1 id="welcome-message"></h1>
+        <header>
+            <h1 data-lang="welcome">Welcome to EXPORTODO</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#home" data-lang="home">Home</a></li>
+                <li><a href="#about" data-lang="about">About Us</a></li>
+                <li><a href="#services" data-lang="services">Services</a></li>
+                <li><a href="#contact" data-lang="contact">Contact</a></li>
+            </ul>
+            <div class="language-selector">
+                <button onclick="setLanguage('en')">English</button>
+                <button onclick="setLanguage('zh')">中文</button>
+                <button onclick="setLanguage('es')">Español</button>
+            </div>
+        </nav>
+        <main>
+            <section id="home">
+                <h2 data-lang="discover">Discover Unique Vintage Items from Around the World</h2>
+                <p data-lang="description">We specialize in sourcing and delivering the finest vintage items from overseas. Whether you're looking for rare collectibles, classic fashion, or unique home decor, we've got you covered.</p>
+            </section>
+            <section id="about">
+                <h2 data-lang="about-title">About Us</h2>
+                <p data-lang="about-description">Our mission is to bring the charm of vintage finds to your doorstep. With years of experience in the industry, we carefully select and curate each item to ensure the highest quality and authenticity.</p>
+            </section>
+            <section id="services">
+                <h2 data-lang="services-title">Our Services</h2>
+                <ul>
+                    <li data-lang="service-1">Personal Shopping Assistance</li>
+                    <li data-lang="service-2">Worldwide Shipping</li>
+                    <li data-lang="service-3">Gift Wrapping and Customization</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2 data-lang="contact-title">Contact Us</h2>
+                <p>Email: info@exportodo.com</p>
+                <p>Phone: +1-234-567-890</p>
+                <p>Address: 123 Vintage Lane, Retro City, Country</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 EXPORTODO. All rights reserved.</p>
+        </footer>
     </div>
-
-    <script>
-        const messages = [
-            '欢迎', // Chinese
-            'Bienvenido', // Spanish
-            'Bienvenue', // French
-            'Welcome', // English
-            'Willkommen', // German
-            'Benvenuto', // Italian
-            'Добро пожаловать', // Russian
-            'ようこそ', // Japanese
-            '환영합니다', // Korean
-            'مرحبا' // Arabic
-        ];
-
-        let currentIndex = 0;
-
-        function updateMessage() {
-            document.getElementById('welcome-message').textContent = messages[currentIndex];
-            currentIndex = (currentIndex + 1) % messages.length;
-        }
-
-        setInterval(updateMessage, 500);
-        updateMessage(); // Initial call to display the first message immediately
-    </script>
 </body>
 </html>
