@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Latam Trade Hub - Home</title>
-  <meta name="description" content="Latam Trade Hub connects global suppliers and buyers for Latin America trade. Your trusted intermediary for any goods.">
-  <meta name="keywords" content="Latin America, trade, intermediary, suppliers, products, China, exporters, importers">
+  <title>Latam Trade Hub - Products</title>
+  <meta name="description" content="Browse popular products for Latin American trade: agriculture, machinery, electronics, building materials, and more.">
+  <meta name="keywords" content="products, trade, Latin America, China, suppliers, export, import">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -33,9 +33,14 @@
   </nav>
   <main class="card-main">
     <div class="card-content">
-      <section>
-        <h2 data-i18n="welcome">Welcome</h2>
-        <p data-i18n="welcome_text">Latam Trade Hub is your trusted intermediary for any goods, connecting suppliers and buyers between China and Latin America.</p>
+      <section id="products">
+        <h2 data-i18n="products">Products</h2>
+        <ul id="product-list"></ul>
+        <div class="pagination">
+          <button id="prevBtn" onclick="changePage(-1)">&lt;</button>
+          <span id="pageInfo"></span>
+          <button id="nextBtn" onclick="changePage(1)">&gt;</button>
+        </div>
       </section>
     </div>
   </main>
