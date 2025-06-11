@@ -1,91 +1,98 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
 }
-
-.container {
-    background-color: #fff;
-    border: 1px solid #b87333; /* 古铜色 */
-    border-radius: 8px;
-    width: 80%;
-    max-width: 1200px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    overflow-y: auto;
-    max-height: 90vh;
-}
-
 header {
-    background-color: #b87333; /* 古铜色 */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background: #0066cc;
+  color: #fff;
+  padding: 30px 0 20px 0;
+  text-align: center;
+  position: relative;
 }
-
+.lang {
+  margin-top: 10px;
+}
+.lang button {
+  margin: 0 3px;
+  padding: 3px 8px;
+  background: #fff;
+  color: #0066cc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
 nav {
-    background-color: #a0522d; /* 古铜色 */
-    padding: 10px;
-    text-align: center;
+  background: #f5f5f5;
+  padding: 15px 0;
+  text-align: center;
 }
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    gap: 15px;
+nav a {
+  margin: 0 15px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
 }
-
-nav ul li {
-    display: inline;
+nav a:hover {
+  color: #ff9900;
 }
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.banner {
+  background: url('https://placehold.co/1200x320?text=Banner') center/cover no-repeat;
+  height: 320px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
 }
-
-nav ul li a:hover {
-    text-decoration: underline;
+.banner-text {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 24px 32px;
+  border-radius: 12px;
 }
-
-.language-selector {
-    margin-top: 10px;
+.container {
+  padding: 30px 10vw;
 }
-
-.language-selector button {
-    background-color: #b87333; /* 古铜色 */
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
+.product-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-
-.language-selector button:hover {
-    background-color: #c68454; /* 浅古铜色 */
+.product {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: center;
 }
-
-main {
-    padding: 20px;
+.product img {
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
-
-section {
-    margin: 20px 0;
-}
-
 footer {
-    background-color: #b87333; /* 古铜色 */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+  background: #0066cc;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 32px;
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 30px 2vw;
+  }
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-text {
+    left: 5%;
+    right: 5%;
+    padding: 16px 10px;
+  }
 }
